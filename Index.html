@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="MC Sankelly Website Programming - Professional, responsive and modern websites for businesses and individuals.">
+
+    <title>MC Sankelly | Website Programming</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f7f9fc;
+            color: #101828;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #00a8ff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin: 8px 0;
+            color: #071b3a;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            color: #667085;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #00a8ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #008bd1;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #071b3a;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #061a35;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            color: white;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #00a8ff, #6938ef);
+        }
+
+        .logo-text h3 {
+            font-size: 18px;
+            line-height: 1.1;
+        }
+
+        .logo-text small {
+            color: #00a8ff;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #00a8ff;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 75px;
+            color: white;
+            background:
+                linear-gradient(rgba(2,20,45,0.93), rgba(2,20,45,0.95)),
+                radial-gradient(circle at right, #173d72, #061a35 60%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text .welcome {
+            color: #00a8ff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 span {
+            color: #00a8ff;
+        }
+
+        .hero-text h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #d6e4f5;
+        }
+
+        .hero-text p {
+            max-width: 600px;
+            color: #b9c8da;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            margin-bottom: 35px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+        }
+
+        .stat h3 {
+            color: #00a8ff;
+            font-size: 28px;
+        }
+
+        .stat p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .code-box {
+            background: #071427;
+            border: 1px solid #24466e;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        .code-top {
+            display: flex;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #607086;
+        }
+
+        .code-box pre {
+            color: #8ed7ff;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services {
+            background: white;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 35px 25px;
+            background: #fff;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e7edf5;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-color: #00a8ff;
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            margin: auto auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e7f7ff;
+            color: #00a8ff;
+            font-size: 25px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #071b3a;
+        }
+
+        .service-card p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: #061a35;
+            color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 380px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(135deg, #062b54, #123f70);
+            border: 1px solid #27547f;
+        }
+
+        .about-image i {
+            font-size: 130px;
+            color: #00a8ff;
+        }
+
+        .about-text span {
+            color: #00a8ff;
+            font-weight: 700;
+        }
+
+        .about-text h2 {
+            font-size: 38px;
+            margin: 10px 0 20px;
+        }
+
+        .about-text p {
+            color: #bdcadd;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        .feature i {
+            color: #00a8ff;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .feature h4 {
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PORTFOLIO
+        ========================== */
+
+        .portfolio {
+            background: #f7f9fc;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e7edf5;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #071b3a, #125b94);
+            color: white;
+            font-size: 60px;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info small {
+            color: #00a8ff;
+            font-weight: 600;
+        }
+
+        .project-info h3 {
+            margin: 7px 0;
+        }
+
+        .project-info p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================== */
+
+        .why-us {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .why-card i {
+            color: #00a8ff;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           TESTIMONIALS
+        ========================== */
+
+        .testimonials {
+            background: #061a35;
+            color: white;
+        }
+
+        .testimonial-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid #25476d;
+        }
+
+        .testimonial-box .stars {
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-box p {
+            color: #d2dcea;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-box h4 {
+            color: #00a8ff;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 35px;
+            color: #071b3a;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: #667085;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .contact-item i {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e7f7ff;
+            color: #00a8ff;
+        }
+
+        .contact-item h4 {
+            font-size: 14px;
+        }
+
+        .contact-item p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+        .contact-form {
+            padding: 35px;
+            background: #f7f9fc;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #d7dfeb;
+            border-radius: 7px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #00a8ff;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-message {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background: #e7f7ff;
+            color: #006a9e;
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #031124;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #9aabc0;
+            font-size: 13px;
+        }
+
+        footer h3 {
+            margin-bottom: 18px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #9aabc0;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00a8ff;
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .socials a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #102b4e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            background: #00a8ff;
+        }
+
+        .copyright {
+            border-top: 1px solid #18304d;
+            text-align: center;
+            padding: 20px;
+            color: #8293a9;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           SCROLL TOP
+        ========================== */
+
+        .scroll-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #00a8ff;
+            color: white;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: -100%;
+                width: 100%;
+                padding: 25px;
+                flex-direction: column;
+                background: #061a35;
+                transition: 0.3s;
+            }
+
+            .nav-links.show {
+                left: 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-content,
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 130px 0 80px;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .service-grid,
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 35px;
+            }
+
+            .hero-text h2 {
+                font-size: 20px;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+            }
+
+            .hero-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .service-grid,
+            .portfolio-grid,
+            .why-grid,
+            .features,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 250px;
+            }
+
+            .about-text h2 {
+                font-size: 30px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .logo-text h3 {
+                font-size: 15px;
+            }
+
+            .logo-icon {
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header>
+    <div class="container">
+        <nav>
+
+            <a href="#home" class="logo">
+
+                <div class="logo-icon">
+                    MS
+                </div>
+
+                <div class="logo-text">
+                    <h3>MC SANKELLY</h3>
+                    <small>WEBSITE PROGRAMMING</small>
+                </div>
+
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <div class="welcome">
+                    <i class="fas fa-code"></i>
+                    Welcome to
+                </div>
+
+                <h1>
+                    MC SANKELLY
+                    <span>WEBSITE PROGRAMMING</span>
+                </h1>
+
+                <h2>
+                    Modern Websites. Clean Code. Your Vision.
+                </h2>
+
+                <p>
+                    We design and develop professional, responsive and
+                    high-performance websites for businesses, organizations
+                    and individuals.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#contact" class="btn btn-primary">
+                        Get Started
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#services" class="btn btn-outline">
+                        View Services
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Responsive</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Quality</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="code-box">
+
+                <div class="code-top">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+  &lt;head&gt;
+
+    &lt;title&gt;
+      MC Sankelly
+    &lt;/title&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;h1&gt;
+      Your Vision
+    &lt;/h1&gt;
+
+    &lt;p&gt;
+      Our Code.
+      Amazing Websites.
+    &lt;/p&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================== -->
+
+<section class="section services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Services</span>
+
+            <h2>What We Do</h2>
+
+            <p>
+                Professional digital solutions designed to help
+                individuals and businesses establish a strong online presence.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+
+                <h3>Custom Websites</h3>
+
+                <p>
+                    Professional websites created specifically
+                    for your business, organization or personal brand.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-mobile-screen"></i>
+                </div>
+
+                <h3>Responsive Design</h3>
+
+                <p>
+                    Websites that work beautifully on phones,
+                    tablets, laptops and desktop computers.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-cart-shopping"></i>
+                </div>
+
+                <h3>E-Commerce</h3>
+
+                <p>
+                    Online stores that allow your customers
+                    to discover and purchase your products.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-gears"></i>
+                </div>
+
+                <h3>Website Maintenance</h3>
+
+                <p>
+                    Website updates, improvements, security
+                    checks and technical maintenance.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+
+                <h3>Web Applications</h3>
+
+                <p>
+                    Functional web applications built to
+                    solve real-world problems.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-pen-ruler"></i>
+                </div>
+
+                <h3>UI/UX Design</h3>
+
+                <p>
+                    Clean and user-friendly interfaces that
+                    provide an excellent browsing experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section class="section about" id="about">
+
+    <div class="container">
+
+        <div class="about-content">
+
+            <div class="about-image">
+
+                <i class="fas fa-laptop-code"></i>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <span>ABOUT MC SANKELLY</span>
+
+                <h2>
+                    We Turn Ideas Into Websites
+                </h2>
+
+                <p>
+                    MC Sankelly Website Programming is focused on
+                    building modern, reliable and responsive websites.
+                </p>
+
+                <p>
+                    Whether you need a business website, portfolio,
+                    online store or custom web application, we can
+                    help bring your idea to life.
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        <i class="fas fa-shield-halved"></i>
+                        <h4>Quality Work</h4>
+                    </div>
+
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h4>On-Time Delivery</h4>
+                    </div>
+
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <h4>Client Satisfaction</h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PORTFOLIO
+========================== -->
+
+<section class="section portfolio" id="portfolio">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Portfolio</span>
+
+            <h2>Recent Projects</h2>
+
+            <p>
+                Some examples of websites and digital projects
+                that can be created by MC Sankelly.
+            </p>
+
+        </div>
+
+
+        <div class="portfolio-grid">
+
+
+            <div class="project">
+
+                <div class="project-image">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+
+                <div class="project-info">
+
+                    <small>E-COMMERCE</small>
+
+                    <h3>Online Store</h3>
+
+                    <p>
+                        A modern online shopping website
+                        for selling products.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-image">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div class="project-info">
+
+                    <small>EDUCATION</small>
+
+                    <h3>Learning Platform</h3>
+
+                    <p>
+                        A platform for schools, teachers
+                        and online learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-image">
+                    <i class="fas fa-building"></i>
+                </div>
+
+                <div class="project-info">
+
+                    <small>BUSINESS</small>
+
+                    <h3>Corporate Website</h3>
+
+                    <p>
+                        A professional business website
+                        for companies and organizations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================== -->
+
+<section class="section why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose Us</span>
+
+            <h2>Why MC Sankelly?</h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <i class="fas fa-code"></i>
+
+                <h3>Clean Code</h3>
+
+                <p>
+                    Well-structured and maintainable website code.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fas fa-mobile-screen"></i>
+
+                <h3>Mobile Friendly</h3>
+
+                <p>
+                    Your website looks great on every device.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fas fa-gauge-high"></i>
+
+                <h3>Fast Performance</h3>
+
+                <p>
+                    Websites designed with performance in mind.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fas fa-headset"></i>
+
+                <h3>Support</h3>
+
+                <p>
+                    Assistance with website updates and improvements.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TESTIMONIAL
+========================== -->
+
+<section class="section testimonials">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Testimonials</span>
+
+            <h2 style="color:white;">What Clients Say</h2>
+
+        </div>
+
+
+        <div class="testimonial-box">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "MC Sankelly delivered a professional website
+                with a clean design and excellent user experience."
+            </p>
+
+            <h4>— Happy Client</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section class="section contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Contact Us</span>
+
+            <h2>Let's Build Your Website</h2>
+
+            <p>
+                Have a website idea? Send us a message and
+                let's discuss your project.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h2>
+                    Get In Touch
+                </h2>
+
+                <p>
+                    We are available to discuss website development,
+                    programming and digital solutions.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <i class="fas fa-phone"></i>
+
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+234 08151937580</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <div>
+                        <h4>Email</h4>
+                        <p>francismbaeli@gmail.com</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <div>
+                        <h4>Location</h4>
+                        <p>Nigeria</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fas fa-clock"></i>
+
+                    <div>
+                        <h4>Support</h4>
+                        <p>Available for website projects</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Service</label>
+
+                    <select id="service">
+
+                        <option>Website Development</option>
+                        <option>E-Commerce Website</option>
+                        <option>Web Application</option>
+                        <option>Website Maintenance</option>
+                        <option>UI/UX Design</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us about your project..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">
+
+                    Send Message
+                    <i class="fas fa-paper-plane"></i>
+
+                </button>
+
+
+                <div class="form-message" id="formMessage">
+                    Thank you! Your message has been received.
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="logo footer-logo">
+
+                    <div class="logo-icon">
+                        MS
+                    </div>
+
+                    <div class="logo-text">
+                        <h3>MC SANKELLY</h3>
+                        <small>WEBSITE PROGRAMMING</small>
+                    </div>
+
+                </div>
+
+                <p>
+                    Building modern websites,
+                    clean code and digital solutions
+                    for businesses and individuals.
+                </p>
+
+                <div class="socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Services</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#services">
+                            Website Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            E-Commerce
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Web Applications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Website Maintenance
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +234 08151937580
+                </p>
+
+                <br>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    francismbaeli@gmail.com
+                </p>
+
+                <br>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    Nigeria
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        MC Sankelly Website Programming.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- SCROLL TO TOP -->
+
+<button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    // Mobile navigation
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("show");
+
+    });
+
+
+    // Close mobile menu when link is clicked
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("show");
+
+        });
+
+    });
+
+
+    // Contact form
+
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        formMessage.style.display = "block";
+
+        contactForm.reset();
+
+        setTimeout(function() {
+
+            formMessage.style.display = "none";
+
+        }, 5000);
+
+    });
+
+
+    // Current year
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    // Scroll-to-top button
+
+    const scrollTop = document.getElementById("scrollTop");
+
+    window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 400) {
+
+            scrollTop.style.display = "block";
+
+        } else {
+
+            scrollTop.style.display = "none";
+
+        }
+
+    });
+
+
+    scrollTop.addEventListener("click", function() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    // Active navigation link
+
+    const sections = document.querySelectorAll("section");
+    const links = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", function() {
+
+        let current = "";
+
+        sections.forEach(function(section) {
+
+            const sectionTop = section.offsetTop - 120;
+
+            if (window.scrollY >= sectionTop) {
+
+                current = section.getAttribute("id");
+
+            }
+
+        });
+
+
+        links.forEach(function(link) {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
